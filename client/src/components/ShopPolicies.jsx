@@ -33,7 +33,7 @@ Returns and exchanges accepted
         <ModalWindow>
           <ModalHeader>
             <CloseModal onClick={() => setToggle(!toggle)}> &times; </CloseModal>
-            <div>Shop Policies</div>
+            Shop Policies
 
           </ModalHeader>
           <ModalBody>

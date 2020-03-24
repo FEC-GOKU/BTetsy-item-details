@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  MessageModal, TitleText, CloseModal, MessageInput, MessageMeet, VendorName, VendorLocation, MessageSellerButton, MeetSection, VendorNameTitle, VendorNameAndLocation, VendorPhotoAndLocation, VendorIcon,
+  MessageModal, TitleText, CloseModal, MessageInput, MessageMeet, VendorName, VendorLocation, MessageSellerButton, MeetSection, VendorNameTitle, VendorNameAndLocation, VendorPhotoAndLocation, VendorIcon, SendMessage, VendorImage
 } from './StyleSheet.js';
 
 
@@ -25,13 +25,10 @@ const Messages = ({
       <div>
         <VendorPhotoAndLocation>
           <VendorIcon>
-            <img src={vendorPhoto} alt=" " />
+            <VendorImage src={vendorPhoto} alt=" " />
           </VendorIcon>
           <VendorNameAndLocation>
             <VendorNameTitle>
-              {' '}
-              {vendorFirstName}
-              {' '}
               <div />
               <VendorLocation>{vendorLocation}</VendorLocation>
             </VendorNameTitle>
@@ -45,9 +42,16 @@ const Messages = ({
       <div>
         <MessageModal toggle={toggle}>
           <CloseModal onClick={() => setToggle(!toggle)}> &times; </CloseModal>
-          <TitleText>Messages</TitleText>
+          <TitleText>
+            {' '}
+message
+            {' '}
+            {' '}
+            {vendorName}
+          </TitleText>
           <div />
           <MessageInput placeholder="Write a Message" />
+          <SendMessage> send </SendMessage>
         </MessageModal>
         <MessageSellerButton onClick={() => setToggle(!toggle)}> Message the Seller </MessageSellerButton>
       </div>

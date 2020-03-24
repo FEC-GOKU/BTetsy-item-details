@@ -41,6 +41,7 @@ function App() {
           vendorLastName={data.vendorLastName}
           vendorLocation={data.vendorLocation}
           vendorPhoto={data.vendorPhoto}
+
         />
       </div>
       <div>

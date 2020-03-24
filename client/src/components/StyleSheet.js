@@ -36,6 +36,7 @@ export const ModalHeader = styled(ModalWindow)`
     width: 100%;
     position: relative
     font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    text-align: center;
 `;
 export const ModalBody = styled(ModalWindow)`
   padding: 0px;
@@ -107,24 +108,53 @@ export const CloseModal = styled.button`
 `;
 
 export const TitleText = styled.div`
+  border-bottom: 1px solid black;
+  padding 10px;
   color: rgb(34, 34, 34);
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   font-size: 16px;
   font-weight: 500;
+  text-align: center;
 `;
 
 export const MessageInput = styled.input`
   position: absolute;
-  bottom: 0px;
+  height: 5%;
+  width: 75%;
+  bottom: 10px;
+  padding: 10px;
+  border-radius: 15px;
+`;
+
+export const SendMessage = styled.button`
+position: absolute;
+height: 5%;
+width: 10%;
+left: 89%
+bottom: 15px;
+padding: 10px;
+border-radius: 15px;
+text-align: center;
+background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+text-align: center;
+display: inline-block;
+font-size: 12px;
+margin-auto;
+cursor: pointer;
 `;
 
 export const MessageModal = styled(ModalWindow)`
+  border-radius: 25px;
   display: ${(props) => (props.toggle ? 'none' : 'inline-block')};
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  padding: 30px
+  right: 30px;
+  bottom: 30px;
   width: 398px;
-  height: 250px;
+  height: 70%;
+  background-image: linear-gradient(tan, white);
 `;
 
 
@@ -138,7 +168,7 @@ export const MessageMeet = styled.div`
 export const VendorName = styled(MessageMeet)`
   display: inline-block;
   text-decoration-line: underline;
-  cursor: pointer
+  cursor: pointer;
 `;
 
 export const MessageSellerButton = styled.button`
@@ -301,6 +331,10 @@ export const VendorIcon = styled.div`
   padding-right: 18px
   text-align: left;
 `;
+
+export const VendorImage = styled.img`
+  border-radius: 25px;
+`
 export const ShippingAndReturns = styled.div`
   box-sizing:border-box;
   color:rgb(34, 34, 34);
